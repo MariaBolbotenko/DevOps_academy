@@ -1,0 +1,29 @@
+- hosts: all
+  become: true     
+  tasks:
+  - name: Install packages
+    ansible.builtin.apt:
+        state: present
+          name:
+        - git
+        - nmap
+        - net-tools
+        - curl
+        - openvpn
+        - tmux
+        - tree
+        - vim
+        - wget
+        - xsel
+        - build-essential
+        - python3-dev
+        - python3-pip
+        - python3-virtualenv
+
+  - name: Install pip packages
+    pip:
+      state: present
+      name:
+        - docker-compose
+        - git-review
+  
