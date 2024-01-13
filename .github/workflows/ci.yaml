@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: action/checkout@v4
-          with:
-            repository: MariaBolbotenko/DevOps_academy
-            token: ${{ secrets.GITHUB_TOKEN }}
-            ref: master
+        with:
+          repository: MariaBolbotenko/DevOps_academy
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: master
 
       - name: Install packages
         run: npm i
